@@ -1,0 +1,9 @@
+gcloud builds submit --timeout=1500s --tag gcr.io/genuine-box-305122/hello
+
+docker images
+
+docker build -t try1 .
+
+docker run -it  -p 5000:8080 try1
+
+export GOOGLE_APPLICATION_CREDENTIALS=genuine-box-305122-46251bdb7e5d.json

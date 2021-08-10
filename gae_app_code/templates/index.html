@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <title>File Upload</title>
+  </head>
+  <body>
+      <div style="text-align:center;"> 
+    <h1>Upload your resume</h1>
+    <form method="POST" action="" enctype="multipart/form-data">
+      <p><input type="file" name="file" multiple></p>
+      <p><input type="submit" value="Submit"></p>
+    </form>
+
+
+    {% for item in ans %}
+    <p> {{ item }} <p/>
+        <video width="320" height="240" controls>
+            <source src= {{ item }} type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    {% endfor %}
+</div>
+</body>
+</html>

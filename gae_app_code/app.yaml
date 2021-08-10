@@ -1,0 +1,8 @@
+runtime: python39
+entrypoint: gunicorn -b :8080 -w 2 main:app
+
+env_variables:
+  PUBSUB_TOPIC: 'projects/genuine-box-305122/topics/resumesqueue'
+  # This token is used to verify that requests originate from your
+  # application. It can be any sufficiently random string.
+  PUBSUB_VERIFICATION_TOKEN: 'adithya2021'
